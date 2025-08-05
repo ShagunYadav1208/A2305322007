@@ -1,0 +1,26 @@
+.pageNotFoundBody
+{
+    position: relative;
+    margin-top: 90px;
+    width: 95vw;
+    height: 87vh;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: white;
+    overflow: hidden;
+    /* transform: scale(0); */
+    transition: height 0.2s ease;
+    padding: 40px;
+}
+
+.title{
+    color: white;
+}

@@ -1,0 +1,207 @@
+.wrapper
+{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    /* transform: scale(0); */
+    transition: height 0.2s ease;
+}
+
+.wrapper .formBox
+{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .formBox.login
+{
+    transition: transform 0.18s ease;
+    transform: translateX(0)
+}
+
+.wrapper.active
+{
+    height: 520px;
+}
+
+.wrapper.active .formBox.login
+{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.register
+{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .formBox.register
+{
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.iconClose
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    font-size: 2em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.formBox h2
+{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.inputBox label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.inputBox input:focus~label, .inputBox input:valid~label
+{
+    top: -5px;
+    left: -5px;
+}
+
+.inputBox input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.inputBox .icon
+{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+}
+
+.rememberForgot
+{
+    font-size: 0.9em;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rememberForgot label input
+{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.rememberForgot a
+{
+    color: rgb(230, 135, 135);
+    text-decoration: none;
+}
+
+.rememberForgot a:hover
+{
+    text-decoration: underline;
+}
+
+.btn
+{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+
+.btn:hover
+{
+    color: white;
+    background: black;
+}
+
+.loginRegister
+{
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.registerLink, .loginLink
+{
+    color: rgb(230, 135, 135);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerLink:hover, .loginLink:hover
+{
+    text-decoration: underline;
+}
+
+.success{
+    color: rgb(130, 220, 40);
+    justify-content: center;
+}
+
+.failed{
+    color: rgb(230, 135, 135);
+    text-align: center;
+}

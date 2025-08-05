@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Protest+Guerrilla&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cascadia Code", sans-serif;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: rgb(45, 219, 190); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo
+{
+    font-size: 2em;
+    color: white;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.link
+{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.link::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.link:hover::after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLoginPopup
+{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .btnLoginPopup:hover
+{
+    background: white;
+    color: black;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownToggle{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.dropdownToggle:hover {
+  background: white;
+  color: black;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg); /* default down arrow */
+}
+
+.arrow.up {
+  transform: rotate(-135deg); /* flips arrow up */
+}
+
+.dropdownMenu {
+  /* position: absolute;
+  background-color: white;
+  min-width: 130px;
+  border-radius: 6px;
+  margin-top: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 1; */
+
+  position: absolute;
+  min-width: 130px;
+  border-radius: 6px;
+  margin-top: 5px;
+  z-index: 1;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.dropdownMenu a {
+  color: black;
+  padding: 10px 12px;
+  display: block;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.dropdownMenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.logout:hover{
+    color: red;
+}
